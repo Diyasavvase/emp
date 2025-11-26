@@ -1,14 +1,24 @@
-def get_employee_info(name, emp_id, department, salary):
+def employee_details(name, emp_id, department, salary):
+    formatted_output = (
+        f"Employee Name: {name}\n"
+        f"Employee ID: {emp_id}\n"
+        f"Department: {department}\n"
+        f"Salary: {salary}"
+    )
+    return formatted_output
 
-    """Returns a formatted string containing employee details."""
 
-    return (f"Employee Name: {name}\n"
-            f"Employee ID: {emp_id}\n"
-            f"Department: {department}\n"
-            f"Salary: ${salary:,.2f}")
+def main():
+    # Direct values (no input taken)
+    name = "John Doe"
+    emp_id = 101
+    department = "HR"
+    salary = 50000
+
+    # Calling the function
+    print(employee_details(name, emp_id, department, salary))
 
 
-
+# Entry point
 if __name__ == "__main__":
-
-    print(get_employee_info("John Doe","E108","cs",59000))
+    main()
